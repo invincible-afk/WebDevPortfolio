@@ -1,0 +1,1171 @@
+@import url('https://fonts.googleapis.com/css2?family=Righteous&family=Work+Sans:wght@100;200;300;400;600;800&family=Black+Ops+One&family=Fira+Code&family=Jersey+10&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&family=Jersey+10&display=swap');
+
+* {
+  box-sizing: border-box;
+  font-family: "Comfortaa";
+  margin: 0;
+  padding: 0;
+  color: #ffffff;
+}	
+
+html {
+  scroll-behavior: smooth; 
+} 
+
+.contenedor-header {
+  background-color: #181c1f;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 99;
+}
+
+.contenedor-header header {
+  max-width: 1100px;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 20px;	
+}
+
+.contenedor-header header .logo a {
+  font-family: 'Black Ops One';
+  font-size: 50px; 
+  background: linear-gradient(90deg, #810404  5%,  #e6062c 95%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-decoration: none;
+}
+
+.contenedor-header .logo:hover {
+  transform: scale(1.5);
+  transition: all 0.2s;
+}
+
+.contenedor-header header ul {
+  display: flex;
+  list-style: none;
+}
+
+.contenedor-header header nav ul li a {
+  color: #8d8f8d;
+  margin: 0 15px;
+  padding: 3px;
+  transition: .5s;
+  text-decoration: none;
+}
+
+.contenedor-header header nav ul li a:hover {
+  color: #1cb698;
+  border-bottom: 2px solid #1cb698;
+  padding-bottom: 3px;
+}
+
+.nav-responsive {
+  background-color: #05ffea;
+  color: #fff;
+  display: none;
+  padding: 5px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  position: absolute;
+  z-index: 1;
+}
+
+/* SECCION RESPONSIVE */
+@media screen and (max-width:980px) {
+  .nav-responsive {
+    display: block;
+  }
+  nav {
+    display: none; 
+  }
+  nav.responsive {
+    display: block;
+    position: absolute;
+    right: 0;
+    top: 75px;
+    background-color: #252A2E;
+    width: 180px;
+  }
+  nav.responsive ul {
+    display: block !important;
+  }
+  nav.responsive ul li {
+    border-bottom: 1px solid #fff;
+    padding: 10px 0;
+  }
+}
+
+@media screen and (max-width:980px) {
+  .contenedor-header nav {
+    display: block; 
+  }
+  .nav-responsive {
+    display: block; 
+  }
+}
+
+/* SECCION INICIO */
+body { 
+  font-family: 'Comfortaa';
+  background-color: #000;
+  margin: 0;
+  padding: 0;
+  border-width: 0;
+}
+
+#matrixSection {
+  position: relative;
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+  background-image: url("./img/texture2.jpg");
+  background-size: contain;
+}
+
+canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+
+.contenido-banner {
+  position: relative;
+  z-index: 2;
+  padding: 20px;
+  background-image: url("./img/texture4.jpg");
+  background-size: contain;
+  max-width: 350px;
+  margin: 100px auto;
+  text-align: center;
+  border-radius: 40px;
+}
+
+.matrixCanvas .contenido-banner img {
+  margin-top: 40px;
+  border: 10px solid #f12ac6;
+  display: block;
+  width: 80%;
+  margin: auto;
+  border-radius: 100%;
+}	
+
+.img {
+  width: 275px;
+  height: auto;
+  border-radius: 50%; /* Corregido */
+  transition: all 0.5s;
+}
+
+.img:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 20px rgb(227, 238, 67);
+}
+
+.contenido-banner h1 {
+  font-family: 'Black Ops One';
+  font-size: 50px; 
+  background: -webkit-linear-gradient(left, #34A853, #42b3f4, #f01bde);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-decoration: none;
+}
+
+.contenido-banner h2 {
+  font-family: 'Black Ops One';
+  font-size: 45px; 
+  background: linear-gradient(90deg, rgb(255, 255, 255) 20%, rgba(0, 0, 0, 0.68) 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-decoration: none;
+}
+
+.contenido-banner .h2 a:hover {
+  background-color: #b1e917;
+  transform: scale(1.1);
+  box-shadow: 0 0 20px rgb(237, 252, 106);
+}
+
+.redes {
+  margin-bottom: 20px;
+}
+
+.redes a {
+  background: -webkit-linear-gradient(left, #34A853, #42b3f4, #f01bde);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-decoration: none;
+  display: inline-block;
+  border: 1px solid #ffffff;
+  border-radius: 100%;
+  width: 42px;
+  height: 42px;
+  line-height: 42px;
+  margin: 40px 5px;
+  font-size: 20px;
+  transition: .3s;
+}
+
+.redes a:hover {
+  background: -webkit-linear-gradient(left, #34A853, #42b3f4, #f01bde);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  transform: scale(1.1);
+  box-shadow: 0 0 20px rgb(255, 255, 255);
+}
+
+.sobremi {
+  padding: 50px 20px;
+  background-color: #1e2326;
+  color: #fff;
+}
+
+.sobremi .contenido-seccion {
+  max-width: 1100px;
+  margin: auto;
+}
+
+.sobremi h2 {
+  font-family: 'Black Ops One';
+  font-size: 50px;
+  background: -webkit-linear-gradient(left, #34A853, #42b3f4, #f01bde);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-decoration: none;
+  text-align: center;
+}
+
+.sobremi .contenido-seccion p {
+  font-size: 18px;
+  line-height: 22px;
+  margin-bottom: 20px;
+}
+
+.sobremi .contenido-seccion p span {
+  color: #1cb698;
+  font-weight: bold;
+}
+
+.sobremi .fila {
+  display: flex;
+}
+
+.sobremi .fila .col {
+  width: 50%;
+}
+
+.sobremi .fila .col h3 {
+  font-size: 28px;
+  font-family: 'Righteous';
+  margin-bottom: 25px;
+  background: -webkit-linear-gradient(left, #34A853, #42b3f4, #f01bde);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-decoration: none;
+  text-align: center;
+}
+
+.sobremi .fila .col .contenedor-datos {
+  display: flex;
+  flex-wrap: wrap;
+}
+.sobremi .contenedor-datos .datos i {
+  margin: 3px;
+  padding-bottom: 3px;
+}
+
+.sobremi .fila .col .contenedor-datos .datos {
+  width: 300px;
+  height: 45px;
+  background-color: #232c2b;
+  border-radius: 15px;
+  margin: 0 25px 25px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  transition: all .5s;
+}
+
+.sobremi .fila .col .contenedor-datos .datos:hover {
+  background-color: #1cb698;
+  transform: scale(1.1);
+  box-shadow: 0 0 20px rgb(128, 226, 230);
+}
+
+.sobremi .fila .col .contenedor-intereses {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.sobremi .fila .col .contenedor-intereses .interes {
+  width: 100px;
+  height: 100px;
+  background-color: #232c2b;
+  border-radius: 15px;
+  margin: 0 25px 25px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  transition: all .5s;
+}
+
+.sobremi .fila .col .contenedor-intereses .interes i {
+  margin: 5px;
+  padding-bottom: 3px;
+}
+
+.sobremi .fila .col .contenedor-intereses .interes:hover {
+  background-color: #1cb698;
+  transform: scale(1.1);
+  box-shadow: 0 0 20px rgb(128, 226, 230);
+}
+
+
+.button { 
+  display: grid; 
+  padding: 10px 20px; 
+  color: #fff; 
+  background: #c8102e; 
+  border: 2px solid #c8102e; 
+  border-radius: 5px; 
+  text-decoration: none; 
+  font-size: 16px; 
+  font-weight: bold; 
+  position: relative; 
+  overflow: hidden; 
+  transition: background 0.3s ease, color 0.3s ease; 
+  justify-content: center; 
+  place-items: center; 
+  width: max-content; 
+  margin: 0 auto; 
+} 
+
+.button span { 
+  position: relative; 
+  z-index: 1; 
+} 
+
+.button-icon { 
+  position: absolute; 
+  bottom: -40px; 
+  right: 10px; 
+  height: auto; 
+  opacity: 0; 
+  transition: opacity 0.3s ease; 
+  z-index: 2; 
+} 
+
+
+.button:hover { 
+  background: #000; 
+  color: #c8102e; 
+} 
+
+
+.button:hover .button-icon { 
+  opacity: 1; 
+} 
+
+.button::before { 
+  content: ''; 
+  position: absolute; 
+  top: 0; 
+  left: 0; 
+  width: 100%; 
+  height: 100%; 
+  background: rgba(255, 255, 255, 0.2); 
+  transform: scaleX(0); 
+  transform-origin: left; 
+  transition: transform 0.3s ease; 
+} 
+
+.button:hover::before { 
+  transform: scaleX(1); 
+  
+   color: #c8102e; 
+}
+
+.button[title] { 
+  position: relative; 
+} 
+
+.button[title]::after { 
+  content: attr(title); 
+  position: absolute; 
+  top: -30px; 
+  left: 50%; 
+  transform: translateX(-50%); 
+  background: #000; 
+  color: #fff; 
+  padding: 5px 10px; 
+  border-radius: 5px; 
+  white-space: nowrap; 
+  opacity: 0; 
+  visibility: hidden; 
+  transition: opacity 0.3s ease; 
+} 
+
+.button:hover[title]::after { 
+  opacity: 1; 
+  visibility: visible; 
+}
+
+/* SECCION SKILLS */
+.skills {
+  background-color: #252A2E;
+  color: #ffffff; 
+  padding: 50px 20px;
+}
+
+.skills .contenido-seccion {
+  max-width: 1100px;
+  margin: auto;
+}
+
+.skills h2 {
+  font-family: 'Black Ops One';
+  font-size: 48px; 
+  background: -webkit-linear-gradient(left, #34A853, #42b3f4, #f01bde);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-decoration: none;
+  text-align: center;
+}
+
+.skills .fila {
+  display: flex;
+}
+
+.skills .fila .col {
+  width: 50%;
+  padding: 0 20px;
+}
+
+.skills .fila .col h3 {
+  font-family: 'Black Ops One';
+  font-size: 40px;
+  margin-bottom: 25px;
+  background: -webkit-linear-gradient(left, #34A853, #42b3f4, #f01bde);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-decoration: none;
+  text-align: left;
+}
+
+.skills .skill > span {
+  font-family: 'Black Ops One';
+  font-size: 30px;
+  font-weight: bold;
+  display: block;
+  margin-bottom: 10px;
+  text-align: left;
+  background: -webkit-linear-gradient(left, #34A853, #42b3f4, #f01bde);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-decoration: none;
+}
+
+.skills .skill .barra-skill {
+  height: 8px;
+  width: 80%;
+  background-color: #131517;
+  position: relative;
+  margin-bottom: 30px;
+}
+
+.skills .skill .progreso {
+  background-color: #c8102e;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 8px;
+  animation: glow 1s infinite alternate;
+  box-shadow: 0 0 10px rgba(15, 1, 0, 0.8);
+}
+
+.skills .skill .barra-skill span {
+  position: absolute;
+  height: 40px;
+  width: 40px;
+  background: #131517;
+  border-radius: 50px;
+  line-height: 40px;
+  text-align: center;
+  top: -17px;
+  right: -15px;
+  font-size: 14px;
+  animation: glow 1s infinite alternate;
+  box-shadow: 0 0 10px rgba(15, 1, 0, 0.8);
+}
+
+@keyframes glow {
+  0% {
+    box-shadow: 0 0 10px rgba(15, 1, 0, 0.8);
+  }
+  100% {
+    box-shadow: 0 0 10px rgba(15, 1, 0, 0.8);
+  }
+}
+
+.skills .skill .javascript {
+  width: 0%;
+  animation: 2s javascript forwards;
+}
+
+@keyframes javascript {
+  0% { width: 0%; }
+  100% { width: 75%; }
+}
+
+.skills .skill .htmlcss {
+  width: 0%;
+  animation: 2s htmlcss forwards;
+}
+
+@keyframes htmlcss {
+  0% { width: 0%; }
+  100% { width: 89%; }
+}
+
+.skills .skill .github {
+  width: 0%;
+  animation: 2s github forwards;
+}
+
+@keyframes github {
+  0% { width: 0%; }
+  100% { width: 95%; }
+}
+
+.skills .skill .wordpress {
+  width: 0%;
+  animation: 2s wordpress forwards;
+}
+
+@keyframes wordpress {
+  0% { width: 0%; }
+  100% { width: 81%; }
+}
+
+.skills .skill .solidity {
+  width: 0%;
+  animation: 2s Solidity forwards;
+}
+
+@keyframes Solidity {
+  0% { width: 0%; }
+  100% { width: 55%; }
+}
+
+.skills .skill .comunicacion {
+  width: 0%;
+  animation: 2s comunicacion forwards;
+}
+
+@keyframes comunicacion {
+  0% { width: 0%; }
+  100% { width: 80%; }
+}
+
+.skills .skill .trabajo {
+  width: 0%;
+  animation: 2s trabajo forwards;
+}
+
+@keyframes trabajo {
+  0% { width: 0%; }
+  100% { width: 70%; }
+}
+
+.skills .skill .creatividad {
+  width: 0%;
+  animation: 2s creatividad forwards;
+}
+
+@keyframes creatividad {
+  0% { width: 0%; }
+  100% { width: 99%; }
+}
+
+.skills .skill .dedicacion {
+  width: 0%;
+  animation: 2s dedicacion forwards;
+}
+
+@keyframes dedicacion {
+  0% { width: 0%; }
+  100% { width: 85%; }
+}
+
+.skills .skill .proyect {
+  width: 0%;
+  animation: 2s proyect forwards;
+}
+
+@keyframes proyect {
+  0% { width: 0%; }
+  100% { width: 94%; }
+}
+
+/* SECCION CURRICULUM */
+
+.curriculum {
+  background-color: #1e2326;
+  color: #98b1af;
+  padding: 50px 20px;
+}
+
+.curriculum .contenido-seccion {
+  max-width: 1100px;
+  margin: auto;
+}
+
+.curriculum h2 {
+  font-size: 48px;
+  font-family: 'Black Ops One';
+  text-align: center;
+  padding: 20px 0;
+  background: -webkit-linear-gradient(left, #34A853, #42b3f4, #f01bde);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-decoration: none;
+}
+
+.curriculum .fila {
+  display: flex;
+  justify-content: space-between;
+}
+
+.curriculum .fila .col {
+  width: 49%;
+  padding: 0 20px;
+}
+
+.curriculum .fila .col h3 {
+  font-size: 28px;
+  margin-bottom: 25px;
+  font-family: 'Black Ops One';
+  background: -webkit-linear-gradient(left, #34A853, #42b3f4, #f01bde);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-decoration: none;
+  text-align: center;
+}
+
+.curriculum .fila .izquierda {
+  border-right: 2px solid #252A2E;
+}
+
+.curriculum .fila .derecha {
+  border-left: 2px solid #252A2E;
+}
+
+.curriculum .fila .item {
+  padding: 25px;
+  margin-bottom: 30px;
+  background-color: #252A2E;
+  position: relative;
+}
+
+.curriculum .fila .item h4 {
+  font-size: 20px;
+  margin-bottom: 10px;
+  font-family: 'Black Ops One';
+  background: -webkit-linear-gradient(left, #34A853, #42b3f4, #f01bde);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-decoration: none;
+  text-align: left;
+}
+
+.curriculum .fila .item .casa {
+  background: -webkit-linear-gradient(left, #34A853, #42b3f4, #f01bde);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-decoration: none;
+  text-align: left;
+  font-size: 20px;
+  font-weight: bold;
+  display: block;
+}
+
+.curriculum .fila .item .fecha {
+  display: block;
+  margin-bottom: 10px;
+  background: -webkit-linear-gradient(left, #34A853, #42b3f4, #f01bde);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-decoration: none;
+}
+
+.curriculum .fila .item p {
+  line-height: 24px;
+}
+
+.curriculum .fila .izq {
+  border-right: 2px solid #1CB698;
+  margin-right: 20px;
+}
+
+.curriculum .fila .der {
+  border-left: 2px solid #1CB698;
+  margin-left: 20px;
+}
+
+.curriculum .fila .item .conectori {
+  height: 2px;
+  background-color: #1CB698;
+  width: 47px;
+  position: absolute;
+  top: 50%;
+  right: -47px;
+  z-index: 5;
+}
+
+.curriculum .fila .item .conectori .circuloi {
+  display: block;
+  height: 10px;
+  width: 10px;
+  border-radius: 50%;
+  background-color: #1CB698;
+  float: right;
+  position: relative;
+  bottom: 4px;
+}
+
+.curriculum .fila .item .conectord {
+  height: 2px;
+  background-color: #1CB698;
+  width: 47px;
+  position: absolute;
+  top: 50%;
+  left: -47px;
+  z-index: 5;
+}
+
+.curriculum .fila .item .conectord .circulod {
+  display: block;
+  height: 10px;
+  width: 10px;
+  border-radius: 50%;
+  background-color: #1CB698;
+  float: left;
+  position: relative;
+  bottom: 4px;
+}
+
+/* SECCION PORTFOLIO */
+.portfolio {
+  background-color: #252A2E;
+  color: #fff;
+  padding: 50px 20px;
+}
+
+.portfolio .contenido-seccion {
+  max-width: 1100px;
+  margin: auto;
+}
+
+.portfolio h2 {
+  font-size: 48px;
+  font-family: 'Black Ops One';
+  text-align: center;
+  padding: 20px 0;
+  background: -webkit-linear-gradient(left, #34A853, #42b3f4, #f01bde);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-decoration: none;
+}
+
+.portfolio .galeria {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.portfolio .galeria .proyecto {
+  position: relative;
+  max-width: 340px;
+  height: fit-content;
+  margin: 10px;
+  cursor: pointer;
+}
+
+.portfolio .galeria .proyecto img {
+  width: 100%;
+  display: block;
+}
+
+.portfolio .galeria .proyecto .overlay {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  background: linear-gradient(#e60bc1cc, rgba(28,182,152,.8));
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  transition: opacity 0.5s ease-in-out; /* Transición mejorada */
+  font-size: 18px;
+  letter-spacing: 3px;
+  opacity: 0;
+  font-family: "Jersey 10", sans-serif;
+  margin-bottom: 15px;
+}
+
+.portfolio .galeria .proyecto .overlay h3 {
+  margin-bottom: 20px;
+  transition: 1s;
+ 
+}
+
+.portfolio .galeria .proyecto .overlay:hover {
+  opacity: 1;
+}
+
+.portfolio .galeria .proyecto .overlay:hover h3 {
+  margin-bottom: 0px;
+}
+.portfolio .galeria .proyecto .button {
+  margin-top: 15px; /* Añade un margen superior para separar el botón del párrafo */
+}
+
+/* SECCION CONTACTO */
+.contacto {
+  background-image: url("img/bg.png");
+  background-size: contain;
+  padding: 50px 0;
+}
+
+.contacto .contenido-seccion {
+  max-width: 1100px;
+  margin: auto;  
+}
+
+.contacto h2 {
+  font-size: 48px;
+  font-family: 'Black Ops One';
+  text-align: center;
+  padding: 20px 0;
+  background: -webkit-linear-gradient(left, #34A853, #42b3f4, #f01bde);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-decoration: none;
+}
+
+.contacto .fila {
+  display: flex;
+}
+
+.contacto .col {
+  width: 50%;
+  padding: 10px;
+  position: relative;
+}
+
+.contacto .col input, .contacto .col textarea {
+  display: block;
+  width: 100%;
+  padding: 18px;
+  border: none;
+  margin-bottom: 20px;
+  background-color: #252A2E;
+  color: #faea05;
+  font-size: 18px;
+}
+
+
+.contacto .col img {
+  width: 100%;
+}
+
+.contacto .col .info {
+  position: absolute;
+  top: 25%;
+  background-image: url("./img/texture3.jpg");
+  padding: 25px;
+  max-width: 350px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 5%;
+  background-size: cover;
+}
+
+.contacto .col .info ul {
+  list-style: none;
+}
+
+.contacto .col .info ul li {
+  margin-bottom: 20px;
+}
+
+.contacto .col .info ul li i {
+  color: #f50a93;
+  display: inline-block;
+  margin-right: 20px;
+}
+
+/* Estilos para el canvas del mapa de continentes */
+#mapCanvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1; /* Asegúrate de que el mapa esté detrás de otros contenidos */
+}
+
+footer {
+  background-color: #252A2E;
+  color: #fff;
+  padding: 15px 0;
+  text-align: center;
+  position: relative; /* Cambiado de absolute a relative */
+  width: 100%;
+}
+ 
+footer .redes {
+  margin-bottom: 20px;
+}
+
+footer .redes a {
+  color: #ca05f1;
+  display: inline-block;
+  text-decoration: none;
+  border: 1px solid #f7f7f7;
+  border-radius: 100%;
+  width: 42px;
+  height: 42px;
+  line-height: 42px;
+  margin: 40px 5px;
+  font-size: 20px;
+  transition: .3s;
+}
+
+footer .redes a:hover {
+  background-color: #b1e917;
+  transform: scale(1.1);
+  box-shadow: 0 0 20px rgb(237, 252, 106);
+}
+
+footer .arriba {
+  display: block;
+  width: 50px;
+  height: 50px;
+  background-color: #c8102e;
+  color: #fff;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: -25px;
+  border-radius: 50%;
+  line-height: 50px;
+  font-size: 18px;
+}
+
+/* SECCION RESPONSIVE */
+@media screen and (max-width:980px) {
+  nav {
+    display: none;
+  }
+  .nav-responsive {
+    display: block;
+  }
+  nav.responsive {
+    display: block;
+    position: absolute;
+    right: 0;
+    top: 75px;
+    background-color: #252A2E;
+    width: 180px;
+  }
+  nav.responsive ul {
+    display: block !important;
+  }
+  nav.responsive ul li {
+    border-bottom: 1px solid #fff;
+    padding: 10px 0;
+  }
+}
+
+@media screen and (max-width:700px) {
+  .sobremi .fila {
+    display: block;
+  }
+  .sobremi .fila .col {
+    width: fit-content;
+  }
+
+  .skills .fila {
+    display: block;
+  }
+  .skills .fila .col {
+    width: 100%;
+  }
+  .skills .fila .col .barra-skill {
+    width: 100%;
+  }
+
+  .curriculum .fila {
+    display: block;
+  }
+  .curriculum .fila .col {
+    width: 90%;
+  }
+  .curriculum .fila .derecha {
+    margin-left: 20px;
+  }
+
+  .portfolio .galeria {
+    display: block;
+    width: 100%;
+  }
+  .portfolio .galeria .proyecto {
+    max-width: 100%;
+  }
+  .portfolio .galeria .proyecto img {
+    width: 100%;
+  }
+  .contacto .fila {
+    display: block;
+  }
+  .contacto .fila .col {
+    width: 100%;
+  }
+}
+
+.phone-button {
+  display: inline-block;
+  padding: 10px 20px;
+  margin: 10px;
+  background-color: #4caf50;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.proyecto:hover .overlay {
+  opacity: 1;
+}
+
+.phone-button {
+  display: inline-block;
+  padding: 10px 20px;
+  color: #fff;
+  background: #c8102e; 
+  border: 2px solid #c8102e;
+  border-radius: 5px;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: bold;
+  position: relative;
+  overflow: hidden;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+.phone-button span {
+  position: relative;
+  z-index: 1;
+}
+
+.phone-button-icon {
+  position: absolute;
+  bottom: -40px; 
+  right: 30px;
+  height: auto;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  z-index: 2; 
+}
+
+.phone-button:hover {
+  background: #000; 
+  color: #c8102e; 
+}
+
+.phone-button:hover .phone-button-icon {
+  opacity: 1; 
+}
+
+.phone-button::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.2);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.3s ease;
+}
+
+.phone-button:hover::before {
+  transform: scaleX(1);
+}
+
+.phone-button[title] {
+  position: relative;
+}
+
+.phone-button[title]::after {
+  content: attr(title);
+  position: absolute;
+  top: -30px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #000;
+  color: #fff;
+  padding: 5px 10px;
+  border-radius: 5px;
+  white-space: nowrap;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease;
+}
+
+.button:hover[title]::after {
+  opacity: 1;
+  visibility: visible;
+}
